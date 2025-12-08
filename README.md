@@ -35,6 +35,11 @@ I compiled polars from source by editing the [Makefile](https://github.com/pola-
 Specifically, I replaced the `maturin develop` with `maturin build`, and added the `--compatibility pypi` and `--target ... --zig` flags.
 You also have to make sure that `ziglang` is pip installed in that script.
 
+## Issues
+
+From a little bit of personal testing, the aarch64 version has a bug where the schema of a csv file is NOT inferred the same way as the x86_64 version. Using a `schema_override` fixed it, though.
+I'm not sure if that happened because how I compiled it, so use these wheels at your own risk.
+
 ## Support
 
 If you encounter any issues or have questions regarding this package, please open an issue.
@@ -42,6 +47,9 @@ If you encounter any issues or have questions regarding this package, please ope
 This repository will be archived when polars officially supports Python 3.14t (i.e. with wheels).
 See this PR for tracking: https://github.com/pola-rs/polars/pull/21914
 
+## Disclaimer
+
+These are wheels I compiled myself, so use this entirely at your own risk. I take no responsiblity for the world ending.
 
 ## License
 
