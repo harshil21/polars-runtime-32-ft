@@ -20,8 +20,8 @@ dependencies = [
 
 [tool.uv.sources]
 polars-runtime-32 = [
-{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_31_aarch64.whl", marker = "platform_machine == 'x86_64'" },
-{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_39_x86_64.whl", marker = "platform_machine == 'aarch64'" }
+{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_31_aarch64.whl", marker = "platform_machine == 'aarch64'" },
+{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_39_x86_64.whl", marker = "platform_machine == 'x86_64'" }
 ]
 
 ```
