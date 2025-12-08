@@ -20,13 +20,20 @@ dependencies = [
 
 [tool.uv.sources]
 polars-runtime-32 = [
-{ url = "wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_39_x86_64.whl", marker = "platform_machine == 'x86_64'" },
-{ url = "wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_39_aarch64.whl", marker = "platform_machine == 'aarch64'" }
+{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_31_aarch64.whl", marker = "platform_machine == 'x86_64'" },
+{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0b2-cp314-cp314t-manylinux_2_39_x86_64.whl", marker = "platform_machine == 'aarch64'" }
 ]
 
 ```
 
 Then doing a regular `uv sync` should install the correct wheel for your platform.
+
+## How it works
+
+I compiled polars from source by editing the [Makefile](https://github.com/pola-rs/polars/blob/py-1.36.0-beta.2/Makefile) to add a new target for `cp314t` (Python 3.14t).
+
+Specifically, I replaced the `maturin develop` with `maturin build`, and added the `--compatibility pypi` and `--target ... --zig` flags.
+You also have to make sure that `ziglang` is pip installed in that script.
 
 ## Support
 
