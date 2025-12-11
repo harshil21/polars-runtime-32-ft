@@ -1,6 +1,6 @@
 # polars-runtime-32-ft
 
-This is a small package that provides Python 3.14t wheels specifically for the `polars` library. It is only compatible with *Polars 1.36.0*.
+This is a small package that provides Python 3.14t wheels specifically for the `polars` library. It is only compatible with *Polars 1.36.1*.
 
 There are currently 2 wheels available:
 
@@ -14,14 +14,14 @@ This is not available on PyPI. If you want to use polars free threaded in your p
 ```toml
 [project]
 dependencies = [
-    "polars==1.36.0",
+    "polars==1.36.1",
     "polars-runtime-32"
 ]
 
 [tool.uv.sources]
 polars-runtime-32 = [
-{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0-cp314-cp314t-manylinux_2_39_aarch64.whl", marker = "platform_machine == 'aarch64'" },
-{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.0-cp314-cp314t-manylinux_2_39_x86_64.whl", marker = "platform_machine == 'x86_64'" }
+{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.1-cp314-cp314t-manylinux_2_39_aarch64.whl", marker = "platform_machine == 'aarch64'" },
+{ url = "https://github.com/harshil21/polars-runtime-32-ft/raw/refs/heads/main/wheels/polars_runtime_32-1.36.1-cp314-cp314t-manylinux_2_39_x86_64.whl", marker = "platform_machine == 'x86_64'" }
 ]
 
 ```
